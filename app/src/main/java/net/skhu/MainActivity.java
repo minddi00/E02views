@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
+
     @Override public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
         if (id == R.id.action_signUp) {
@@ -43,7 +44,12 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(this, SpinnersActivity.class);
             startActivity(intent);
             return true;
+        }else if (id == R.id.action_alerts) {
+            Intent intent = new Intent(this, AlertsActivity.class);
+            startActivity(intent);
+            return true;
         }
+
         return super.onOptionsItemSelected(item);
     }
 }
